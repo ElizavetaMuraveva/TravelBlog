@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дневник путешествий</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Дневник путешествий</h1>
+    </header>
+
+    <main>
+        <section id="user-section">
+            <h2>Регистрация/Выбор пользователя</h2>
+            <form id="userForm">
+                <label for="username">Введите имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+                <button type="submit">Создать пользователя</button>
+            </form>
+
+            <label for="userSelect">Выберите пользователя для просмотра:</label>
+            <select id="userSelect">
+
+            </select>
+        </section>
+
+        <section id="travel-entry">
+            <h2>Добавить новое путешествие</h2>
+            <form id="travelForm">
+                <label for="destination">Место назначения:</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <label for="cost">Стоимость путешествия:</label>
+                <div id="cost-section">
+                    <input type="number" id="accommodation" name="accommodation" placeholder="Жилье" min="0"
+                        inputmode="decimal" pattern="\d*">
+                    <input type="number" id="tickets" name="tickets" placeholder="Билеты" min="0" inputmode="decimal"
+                        pattern="\d*">
+                    <input type="number" id="food" name="food" placeholder="Еда" min="0" inputmode="decimal"
+                        pattern="\d*">
+                    <input type="number" id="entertainment" name="entertainment" placeholder="Развлечения" min="0"
+                        inputmode="decimal" pattern="\d*">
+                </div>
+
+                <label for="heritage">Места культурного наследия:</label>
+                <textarea id="heritage" name="heritage" rows="3" placeholder="Например, музеи, памятники..."
+                    required></textarea>
+
+                <label for="places">Места для посещения:</label>
+                <textarea id="places" name="places" rows="3" placeholder="Рестораны, парки, пляжи..."
+                    required></textarea>
+
+                <button type="submit">Добавить запись</button>
+            </form>
+        </section>
+
+        <section id="travel-entries">
+            <h2>Записи о путешествиях пользователя</h2>
+            <div id="entries">
+
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
